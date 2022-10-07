@@ -31,8 +31,4 @@ class PowersController < ApplicationController
     render json: {error: "Power not found"}, status: :not_found 
   end 
 
-  def render_invalid_record(exception) 
-    render json: {errors: exception.record.errors.full_messages}, status: :unprocessable_entity
-  end
-
 end
